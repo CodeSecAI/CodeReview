@@ -1,12 +1,15 @@
 # CodeSec.ai model (Cybertron) demostrating how it can propely detect compared to the results NTT Group published for using GPT for code reviews.
 
-## Test Plan
+***TLDR; Vanilla ChatGPT should never be used for code reviews. A memory model has to be used to ensure correct results.***
+## Background
 
-CodeSec.ai tested DVWA vulnerabilites to see how Cybertron compared to the benchmark NCC group released. 
+CodeSec.ai is a cutting-edge security technology that utilizes state-of-the-art deep learning models to assist engineers and developers in creating secure code. In order to demonstrate the superiority of our technology, we performed an extensive test on DVWA vulnerabilities. Our team tested the vulnerabilities in order to compare how CodeSec.ai performed against the established benchmark established by the NCC Group.
+
+Additionally, we also carried out a test on the same vulnerabilities as a comparison of CodeSec.ai versus regular GPTs. Our findings revealed that CodeSec.ai outperforms other AI-based solutions in identifying and effectively remediating vulnerabilities. This is a testament to our commitment to providing a highly advanced and innovative solution that is specifically designed to meet the unique needs of developers and engineers looking to create secure code.
 
 https://research.nccgroup.com/2023/02/09/security-code-review-with-chatgpt/#:~:text=TL%3BDR%3A%20Don't,say%20that%20you%20shouldn't
 
-### Test Results
+### Security Code Review
 
 ```
 PS C:\Users\grego> python PenTestTool.py -m model.jsonl -t -p .\dvwa\vulnerabilities\exec\source -P dvwa --provider azure --azure-model CodeSec --mode code-review -f ".php" --output dvwa.jsonl
